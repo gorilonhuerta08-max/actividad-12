@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de Ejercicios: Arreglos y Objetos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.4;
+    }
+
+    /* Encabezado */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 16px;
+      color: #1e2d4a;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .header p {
+      margin: 4px 0 0;
+      font-size: 13px;
+      color: #666;
+    }
+
+    hr.gold-line {
+      border: none;
+      height: 2px;
+      background-color: #c59b27;
+      margin: 10px 0 25px 0;
+    }
+
+    h1.main-title {
+      text-align: center;
+      color: #1a2e40;
+      font-size: 26px;
+      margin-bottom: 2px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-top: 0;
+      margin-bottom: 25px;
+    }
+
+    /* Tabla de Objetivos / Habilidades */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 25px;
+    }
+    .info-table td {
+      border: 1px solid #ccc;
+      padding: 10px 12px;
+      font-size: 14px;
+    }
+    .info-table td.label {
+      background-color: #1c2b46;
+      color: white;
+      font-weight: bold;
+      width: 25%;
+      vertical-align: top;
+    }
+
+    /* Secciones y Niveles */
+    .block-title {
+      color: #1e2d4a;
+      font-size: 20px;
+      border-bottom: 2px solid #c59b27;
+      padding-bottom: 4px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+    }
+
+    .level-title {
+      color: #1e2d4a;
+      font-size: 16px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* Estilos de Ejercicios */
+    .exercise {
+      margin-bottom: 30px;
+    }
+
+    .ex-header {
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .tag-basico { color: #2e7d32; font-weight: bold; }
+    .tag-intermedio { color: #2e7d32; font-weight: bold; }
+    .tag-avanzado { color: #d87d05; font-weight: bold; }
+
+    .ex-desc {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    /* Tablas de Entrada/Salida */
+    .io-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 12px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+    .io-table th {
+      background-color: #1c2b46;
+      color: white;
+      text-align: left;
+      padding: 8px 12px;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      width: 50%;
+    }
+    .io-table td {
+      border: 1px solid #ccc;
+      padding: 8px 12px;
+      background-color: #fff;
+    }
+
+    /* Caja de Pista */
+    .hint-box {
+      background-color: #fdf8e2;
+      border-left: 5px solid #c59b27;
+      padding: 10px 15px;
+      font-size: 13px;
+      color: #555;
+      font-style: italic;
+    }
+    .hint-box span.hint-label {
+      font-weight: bold;
+      font-style: normal;
+      color: #b38200;
+    }
+    .hint-box code {
+      font-family: monospace;
+      font-style: normal;
+      background-color: rgba(0,0,0,0.05);
+      padding: 1px 4px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Encabezado del Colegio -->
+  <div class="header">
+    <h2>Colegio El Belloto</h2>
+    <p>María Isabel 892, Belloto · www.colegioelbelloto.cl</p>
+  </div>
+  
+  <hr class="gold-line">
+
+  <!-- Título Principal -->
+  <h1 class="main-title">Guía de Ejercicios: Arreglos y Objetos</h1>
+  <div class="subtitle">JavaScript</div>
+
+  <table class="info-table">
+    <tr>
+      <td class="label">Objetivo</td>
+      <td>Practicar el recorrido y manipulación de arreglos, y la creación de objetos literales y funciones fábrica en JavaScript.</td>
+    </tr>
+    <tr>
+      <td class="label">Habilidades</td>
+      <td>Recorrido de arreglos con for, acumuladores, comparación de elementos, filtrado de valores, objetos literales y funciones que crean y devuelven objetos.</td>
+    </tr>
+  </table>
+
+  <p style="font-size: 14px;">
+    Resuelve cada ejercicio directamente en tu computador (por ejemplo, un archivo por ejercicio: e01.js, e02.js, etc.). Los ejercicios están ordenados de menor a mayor dificultad dentro de cada bloque.
+  </p>
+
+  <h2 class="block-title">Bloque A: Arreglos</h2>
+
+  <h3 class="level-title">Nivel básico</h3>
+
+  <div class="exercise">
+    <div class="ex-header">E1. <span class="tag-basico">[Básico]</span></div>
+    <div class="ex-desc">Declara un arreglo con algunos números y muéstralos todos en la consola, separados por espacio.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[3, 7, 1, 9, 5]</td>
+        <td>3 7 1 9 5</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Puedes recorrer el arreglo con un for, o usar <code>arreglo.join(" ")</code> para unir todos los valores en un solo texto.
+    </div>
+  </div>
+
+  <!-- E2 -->
+  <div class="exercise">
+    <div class="ex-header">E2. <span class="tag-basico">[Básico]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, recorre cada posición y suma sus valores usando un acumulador.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[5, 10, 15]</td>
+        <td>30</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Empieza con <code>let suma = 0;</code> y ve sumando <code>arreglo[i]</code> dentro de un for.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="ex-header">E3. <span class="tag-basico">[Básico]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, muéstralo en orden inverso: de la última posición a la primera.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[3, 7, 1, 9, 5]</td>
+        <td>5 9 1 7 3</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Un for que recorra desde <code>arreglo.length - 1</code> hasta 0 pasa por el arreglo en sentido inverso.
+    </div>
+  </div>
+
+  <h3 class="level-title">Nivel intermedio</h3>
+
+  <div class="exercise">
+    <div class="ex-header">E4. <span class="tag-intermedio">[Intermedio]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, cuenta cuántos de ellos son pares.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[3, 4, 7, 8, 2]</td>
+        <td>3</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Usa el operador % para ver si el resto de dividir cada número por 2 es 0.
+    </div>
+  </div>
+
+  <div class="exercise">
+    <div class="ex-header">E5. <span class="tag-intermedio">[Intermedio]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, calcula el promedio de todos sus elementos.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[5, 10, 15, 20]</td>
+        <td>12.5</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> El promedio es la suma de todos los elementos dividida por la cantidad de elementos (<code>arreglo.length</code>).
+    </div>
+  </div>
+
+  <h3 class="level-title">Nivel avanzado</h3>
+
+  <div class="exercise">
+    <div class="ex-header">E6. <span class="tag-avanzado">[Avanzado]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, encuentra el mayor y el menor valor recorriendo el arreglo una sola vez.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[3, 7, 1, 9, 5]</td>
+        <td>Mayor: 9 Menor: 1</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Guarda el primer elemento como mayor y menor iniciales, y ve actualizándolos a medida que recorres el resto del arreglo.
+    </div>
+  </div>
+
+  
+  <div class="exercise">
+    <div class="ex-header">E7. <span class="tag-avanzado">[Avanzado]</span></div>
+    <div class="ex-desc">Dado un arreglo de números, muestra solo los elementos que aparecen una única vez (los que no se repiten).</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>[3, 5, 3, 7, 5, 1]</td>
+        <td>7 1</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Para cada número, puedes contar cuántas veces aparece en el arreglo y mostrar solo los que aparecen exactamente una vez.
+    </div>
+  </div>
+
+  
+  <h2 class="block-title">Bloque B: Objetos</h2>
+
+  <h3 class="level-title">Nivel básico</h3>
+
+  <!-- E8 -->
+  <div class="exercise">
+    <div class="ex-header">E8. <span class="tag-basico">[Básico]</span></div>
+    <div class="ex-desc">Crea un objeto que represente un libro, con propiedades como título, autor y año de publicación. Luego muéstralo completo con console.log.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>
+          titulo: "Cien años de soledad",<br>
+          autor: "Gabriel García Márquez",<br>
+          año: 1967
+        </td>
+        <td>{ titulo: 'Cien años de soledad', autor: 'Gabriel García Márquez', anio: 1967 }</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Un objeto se escribe entre llaves {}, con pares propiedad: valor separados por coma.
+    </div>
+  </div>
+
+  <h3 class="level-title">Nivel intermedio</h3>
+
+  <!-- E9 -->
+  <div class="exercise">
+    <div class="ex-header">E9. <span class="tag-intermedio">[Intermedio]</span></div>
+    <div class="ex-desc">Crea una función llamada crearMascota que reciba nombre, especie y edad, y devuelva un objeto con esos datos. Luego, usa la función para crear al menos dos mascotas distintas.</div>
+    <table class="io-table">
+      <tr>
+        <th>Entrada</th>
+        <th>Salida</th>
+      </tr>
+      <tr>
+        <td>crearMascota("Toby", "perro", 3)</td>
+        <td>{ nombre: 'Toby', especie: 'perro', edad: 3 }</td>
+      </tr>
+    </table>
+    <div class="hint-box">
+      <span class="hint-label">Pista:</span> Dentro de la función, crea un objeto vacío, asígnale cada propiedad una por una y termina con return.
+    </div>
+  </div>
+
+  <h3 class="level-title">Nivel avanzado</h3>
+
+</body>
+</html>
